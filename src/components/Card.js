@@ -74,14 +74,14 @@ const Card = ({movie}) => { //on récupère la donnée passé à l'enfant dans l
         return genreArray.map((genre) => <li key={genre}>{genre}</li>);
     };
 
-  const addStorage = () => {
-    let storedData = window.localStorage.movies ? window.localStorage.movies.split(",") : [];
+    const addStorage = () => {
+        let storedData = window.localStorage.movies ? window.localStorage.movies.split(",") : [];
 
-    if (!storedData.includes(movie.id.toString())) {
-      storedData.push(movie.id);
-      window.localStorage.movies = storedData;
-    }
-  };
+        if (!storedData.includes(movie.id.toString())) {
+        storedData.push(movie.id);
+        window.localStorage.movies = storedData;
+        }
+    };
 
     return (
         <div className="card">
